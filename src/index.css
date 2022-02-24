@@ -13,7 +13,7 @@ code {
     monospace;
 }
 .middle-banner{
-  margin-top: 5vh;
+  margin-top: 1vh;
   position: relative;
 }
 
@@ -76,25 +76,29 @@ font-weight: 400;
 }
 
 .next-image{
-  height: 7vh;
+  height: auto;
   width: 3.5vw;
   position: absolute;
-  top: 22vh;
+  top: 40%;
   right: 1vw;
 }
 .next-image:hover{
   cursor: pointer;
 }
 .next-trending-image{
-  height: 7vh;
+  height: auto;
   width: 3.5vw;
   position: absolute;
   right: 1vw;
-  top: 22vh;
+  top: 40%;
 }
 .next-trending-image:hover{
   cursor: pointer;
 }
 .trending-slider{
   position: relative;
+  margin-bottom: 10px;
+}
+.course-name{
+  font-weight: 700;
 }

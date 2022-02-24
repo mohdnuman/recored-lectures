@@ -19,7 +19,7 @@ class CourseCard extends Component {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {this.props.courses.name}
+              <span className='course-name'>{this.props.courses.name}</span>
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Lizards are a widespread group of squamate reptiles, with over
