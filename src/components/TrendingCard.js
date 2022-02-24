@@ -10,7 +10,7 @@ import courseImage from '../assets/images/courseImage.png';
 class CourseCard extends Component {
     render() {
         return (
-            <Card sx={{ maxWidth: 255, margin:2, display:'inline-block' }}>
+            <Card sx={{ maxWidth: 255, margin:2, display:'inline-block' }} className="card">
           <CardMedia
             component="img"
             height="140"

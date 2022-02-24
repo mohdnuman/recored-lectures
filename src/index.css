@@ -102,3 +102,7 @@ font-weight: 400;
 .course-name{
   font-weight: 700;
 }
+.card:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
