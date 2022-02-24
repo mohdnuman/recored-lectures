@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,90 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.middle-banner{
+  margin-top: 5vh;
+  position: relative;
+}
+
+.middle-text{
+height: auto;
+width: 30vw;
+overflow-wrap: break-word;
+padding: 24px;
+font-size: 1.5rem;
+font-weight: 400;
+  background-color: white;
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  font-family: 'Abril Fatface', cursive;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+
+}
+/* .course-name{
+  font-size: 1.2rem;
+  margin-left: 10px;
+  font-weight: 500;
+} */
+.default:hover{
+  font-weight: 700;
+  cursor: pointer;
+
+}
+.active:hover{
+  cursor: pointer;
+}
+.course-names{
+  margin-bottom:2vh ;
+}
+.courses{
+  margin-top: 4vh;
+}
+.active{
+  font-size: 1.2rem;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.default{
+  font-size: 1rem;
+  margin-left: 10px;
+  font-weight: 500;
+  color: darkgrey;
+}
+.slider{
+  border: 0.5px solid grey;
+  margin-bottom: 3vh;
+  position: relative;
+}
+.trending-text{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 7.5vw;
+}
+
+.next-image{
+  height: 7vh;
+  width: 3.5vw;
+  position: absolute;
+  top: 22vh;
+  right: 1vw;
+}
+.next-image:hover{
+  cursor: pointer;
+}
+.next-trending-image{
+  height: 7vh;
+  width: 3.5vw;
+  position: absolute;
+  right: 1vw;
+  top: 22vh;
+}
+.next-trending-image:hover{
+  cursor: pointer;
+}
+.trending-slider{
+  position: relative;
 }
