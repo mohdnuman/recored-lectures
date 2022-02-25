@@ -105,4 +105,12 @@ font-weight: 400;
 .card:hover{
   opacity: 0.7;
   cursor: pointer;
+
+}
+.prev-image{
+  height: auto;
+  width: 3.5vw;
+  position: absolute;
+  top: 40%;
+  left: 1vw;
 }

@@ -14,16 +14,15 @@ class CourseCard extends Component {
           <CardMedia
             component="img"
             height="140"
-            image={courseImage}
+            image={`http://192.168.1.37:8000${this.props.course.avatar}`}
             alt="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              <span className='course-name'>{this.props.courses.name}</span>
+              <span className='course-name'>{this.props.course.name}</span>
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              {this.props.course.description}
             </Typography>
           </CardContent>
         </Card>
