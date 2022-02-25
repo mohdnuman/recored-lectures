@@ -114,3 +114,6 @@ font-weight: 400;
   top: 40%;
   left: 1vw;
 }
+.prev-image:hover{
+  cursor: pointer;
+}
