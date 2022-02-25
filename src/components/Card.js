@@ -6,11 +6,12 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import courseImage from '../assets/images/courseImage.png';
+import {Link} from 'react-router-dom'
 
 class CourseCard extends Component {
     render() {
         return (
-            <Card sx={{ maxWidth: 243, margin:2, display:'inline-block' }} className="card">
+            <Link to={`/course/${this.props.course._id}`}><Card sx={{ maxWidth: 243, margin:2, display:'inline-block' }} className="card">
           <CardMedia
             component="img"
             height="140"
@@ -26,6 +27,7 @@ class CourseCard extends Component {
             </Typography>
           </CardContent>
         </Card>
+        </Link>
         );
     }
 }

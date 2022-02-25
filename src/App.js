@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Navbar,MiddleBanner,Courses,Trending } from './components';
 import {fetchTechCourses,fetchNonTechCourses,fetchSkillBasedCourses} from './actions/courses';
 import {connect} from 'react-redux';
+import Home from './pages/Home';
+import CoursePage from './pages/CoursePage'
+import { BrowserRouter as Router,Route,Switch,Redirect } from 'react-router-dom';
 
 
 class App extends Component {
@@ -14,12 +16,16 @@ class App extends Component {
   
   render() {
     return (
-      <div id='App'>
-        <Navbar />
-        <MiddleBanner/>
-        <Courses/>
-        <Trending />
+      <Router>
+      <div>
+        
+          <Switch>
+            <Route component={Home} exact path="/" />
+            <Route component={CoursePage} path="/course/:id" dispatch={this.props.dispatch} courses={this.props.courses}/>
+          </Switch>
+        
       </div>
+      </Router>
     );
   }
 }
