@@ -5,6 +5,8 @@ import Slider from './Slider';
 import Card from './Card';
 import Trending from './Trending';
 import TrendingCard from './TrendingCard';
+import LecturesList from './LecturesList';
+import LectureCard from './LectureCard';
 
 export{
     Navbar,
@@ -13,5 +15,7 @@ export{
     Slider,
     Card,
     Trending,
-    TrendingCard
+    TrendingCard,
+    LecturesList,
+    LectureCard
 }
