@@ -15,7 +15,7 @@ class CourseCard extends Component {
           <CardMedia
             component="img"
             height="140"
-            image={`http://192.168.1.37:8000${this.props.course.avatar}`}
+            image={`http://localhost:8000${this.props.course.avatar}`}
             alt="green iguana"
           />
           <CardContent>

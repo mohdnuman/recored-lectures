@@ -1,5 +1,7 @@
-import { Construction } from '@mui/icons-material';
 import React, { Component } from 'react';
+import {fetchCourse} from '../actions/activeCourse';
+import {connect} from 'react-redux';
+
 
 class CoursePage extends Component {
     constructor(props){
@@ -8,30 +10,32 @@ class CoursePage extends Component {
             course:{}
         }
     }
-    showCourse=()=>{
-        let course={}
-        for(let i=0;i<this.props.courses.length;i++){
-            if(this.props.courses[i]._id===this.props.match.params.id){
-                course=this.props.courses[i]
-            }
-        }
-        this.setState({
-            course:course
-        })
+    componentDidMount() {
+        this.props.dispatch(fetchCourse(this.props.match.params.id));
     }
+    
+
     render() {
-        if(this.props.courses.length===0){
+        if(this.props.activeCourse.length===0)
+        {
             return <div>Loading...</div>
         }
-        
+        else{
         return (
             <div>
-                {this.showCourse()}
-                {this.state.course.name}
-                {this.state.course.decription}
+                {this.props.activeCourse.name}
+                {this.props.activeCourse.description}
+                
             </div>
         );
+        }
     }
 }
-
-export default CoursePage;
+function mapstatetoprops(state){
+    return{
+      activeCourse:state.activeCourse
+    };
+  }
+  
+  
+  export default connect(mapstatetoprops)(CoursePage);

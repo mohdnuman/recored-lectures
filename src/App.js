@@ -21,7 +21,12 @@ class App extends Component {
         
           <Switch>
             <Route component={Home} exact path="/" />
-            <Route component={CoursePage} path="/course/:id" dispatch={this.props.dispatch} courses={this.props.courses}/>
+            {/* <Route component={CoursePage} path="/course/:id" dispatch={this.props.dispatch} courses={this.props.courses}/> */}
+            <Route path="/course/:id" 
+            render={(props)=>{
+              return <CoursePage {...props} courses={this.props.courses}/>
+            }}
+          />
           </Switch>
         
       </div>

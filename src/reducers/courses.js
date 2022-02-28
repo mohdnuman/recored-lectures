@@ -6,7 +6,7 @@ const initialCourseState = {
   skillbased: [],
 };
 
-export default function profile(state = initialCourseState, action) {
+export default function courses(state = initialCourseState, action) {
   switch (action.type) {
     case UPDATE_TECH_COURSES:
       return {
