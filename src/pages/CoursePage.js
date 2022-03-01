@@ -23,9 +23,9 @@ class CoursePage extends Component {
             sx={{ bgcolor: "black" }}
             className="course-bg-banner"
           >
-            <div className="course-name">
-              {/* {this.props.activeCourse.name} */}
-              Learn Web Development
+            <div className="course-name-page">
+              {this.props.activeCourse.name}
+              {/* Learn Web Development */}
             </div>
             <div className="course-description">
               {this.props.activeCourse.description}

@@ -5,6 +5,7 @@ class LectureCard extends Component {
     super(props);
     this.state = {
       active: false,
+      duration:0
     };
   }
   handleDrop = () => {
@@ -17,6 +18,9 @@ class LectureCard extends Component {
         active:false
     })
   }
+  onLoad = (data) => {
+    this.setState({ duration: data.duration });
+};
   render() {
     if (this.props.lecture.length === 0) {
       return <div>Loading...</div>;
@@ -35,16 +39,18 @@ class LectureCard extends Component {
             <div className="lecture-active">
               <div className="lecture-not-active">
                 <span style={{fontWeight:800}}>{this.props.lecture.name}</span>
+                <span id="meta">{this.state.duration}</span>
                 <span className="drop-down" onClick={this.handleDropClose}>
                   <img src="https://cdn-icons.flaticon.com/png/512/2985/premium/2985150.png?token=exp=1646077440~hmac=72719f6e732060f07ee818ce1c54c44a" style={{height:20, width:20}}/>
                 </span>
               </div>
-              <video className="video" controls>
+              {/* <video className="video" id="video_player" onLoad={this.onLoad} controls>
                 <source
                   src={`http://localhost:8000${this.props.lecture.video}`}
                   type="video/ogg"
                 ></source>
-              </video>
+              </video> */}
+              <video src={`http://localhost:8000${this.props.lecture.video}`} onLoad={this.onLoad} className="video"/>
             </div>
           )}
         </div>
