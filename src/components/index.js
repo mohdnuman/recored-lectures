@@ -7,6 +7,7 @@ import Trending from './Trending';
 import TrendingCard from './TrendingCard';
 import LecturesList from './LecturesList';
 import LectureCard from './LectureCard';
+import CourseForm from './CourseForm';
 
 export{
     Navbar,
@@ -17,5 +18,6 @@ export{
     Trending,
     TrendingCard,
     LecturesList,
-    LectureCard
+    LectureCard,
+    CourseForm
 }

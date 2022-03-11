@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { Navbar } from "../components";
 import { Container } from "@mui/material";
 import {LecturesList} from '../components/index';
+import {Link} from 'react-router-dom'
 
 class CoursePage extends Component {
   
@@ -29,6 +30,13 @@ class CoursePage extends Component {
             </div>
             <div className="course-description">
               {this.props.activeCourse.description}
+            </div>
+            <div>
+              <Link to={`/course/edit/${this.props.activeCourse._id}`}>
+              <button className="edit-course-button">
+                Edit course
+              </button>
+              </Link>
             </div>
             <Container maxWidth="false" className="course-banner">
               <img

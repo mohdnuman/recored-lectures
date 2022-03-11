@@ -4,7 +4,9 @@ export  const APIUrls={
     fetchTechCourses:()=>`${API_ROOT}/courses/tech`,
     fetchNonTechCourses:()=>`${API_ROOT}/courses/nontech`,
     fetchSkillBasedCourses:()=>`${API_ROOT}/courses/skillbased`,
-    fetchCourse:(id)=>`${API_ROOT}/courses/${id}`
+    fetchCourse:(id)=>`${API_ROOT}/courses/${id}`,
+    createCourse:()=>`${API_ROOT}/courses/create`,
+    createLecture:()=>`${API_ROOT}/lectures/create`
 
     // userProfile:(userId)=>`${API_ROOT}/users/${userId}`,
     // userFriends: () => `${API_ROOT}/friendship/fetch_user_friends`,

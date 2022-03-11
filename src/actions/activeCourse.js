@@ -1,5 +1,6 @@
-import {UPDATE_ACTIVE_COURSE} from './actionTypes';
+import {UPDATE_ACTIVE_COURSE,UPDATE_LECTURES} from './actionTypes';
 import{APIUrls} from '../helpers/urls';
+import axios from 'axios';
 
 export function fetchCourse(id){
     return(dispatch)=>{
@@ -24,4 +25,28 @@ export function updateCourse(course){
         type:UPDATE_ACTIVE_COURSE,
         course:course
     };
+}
+
+export function createLecture(formData){
+    return async (dispatch) => {
+        const url = APIUrls.createLecture();
+    
+        const config = {
+          headers: {
+            Accept: "application/json",
+            "content-type": "multipart/form-data",
+          },
+        };
+    
+        let res = await axios.post(url, formData, config);
+        let data = res.data;
+        dispatch(addLecture(data.data.lecture));
+      };
+}
+
+export function addLecture(lecture){
+    return{
+        type:UPDATE_LECTURES,
+        lecture:lecture
+    }
 }

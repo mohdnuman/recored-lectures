@@ -1,5 +1,7 @@
-import {UPDATE_TECH_COURSES,UPDATE_NON_TECH_COURSES,UPDATE_SKILL_BASED_COURSES} from './actionTypes';
+import {UPDATE_TECH_COURSES,UPDATE_NON_TECH_COURSES,UPDATE_SKILL_BASED_COURSES,UPDATE_COURSES} from './actionTypes';
 import{APIUrls} from '../helpers/urls';
+import axios from 'axios';
+
 
 export function fetchTechCourses(){
     return(dispatch)=>{
@@ -78,4 +80,27 @@ export function updateNonTechCourses(courses){
     };
 }
 
+export function createCourse(formData){
+    return async (dispatch) => {
+        const url = APIUrls.createCourse();
+    
+        const config = {
+          headers: {
+            Accept: "application/json",
+            "content-type": "multipart/form-data",
+          },
+        };
+    
+        let res = await axios.post(url, formData, config);
+        let data = res.data;
+        dispatch(addCourse(data.data.course));
+      };
+}
+
+export function addCourse(course){
+    return{
+        type:UPDATE_COURSES,
+        course:course
+    }
+}
 

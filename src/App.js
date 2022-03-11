@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import Home from './pages/Home';
 import CoursePage from './pages/CoursePage'
 import { BrowserRouter as Router,Route,Switch,Redirect } from 'react-router-dom';
+import CreateCourse from './pages/CreateCourse';
+import EditCourse from './pages/EditCourse';
 
 
 class App extends Component {
@@ -21,12 +23,15 @@ class App extends Component {
         
           <Switch>
             <Route component={Home} exact path="/" />
+            <Route exact path="/course/edit/:id" component={EditCourse}/>
+            <Route exact path="/course/create" component={CreateCourse}/>
             {/* <Route component={CoursePage} path="/course/:id" dispatch={this.props.dispatch} courses={this.props.courses}/> */}
             <Route path="/course/:id" 
             render={(props)=>{
-              return <CoursePage {...props} courses={this.props.courses}/>
+              return <CoursePage {...props} />
             }}
           />
+          
           </Switch>
         
       </div>

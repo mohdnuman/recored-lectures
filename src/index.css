@@ -200,3 +200,65 @@ position: relative;
   position: relative;
   padding-top: 3vh;
 }
+.create-course-banner{
+  height: 75vh;
+  max-width: 25vw;
+  position: relative;
+  left: 30vw;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  text-align: center;
+}
+.create-course-button{
+  border: 0px;
+  background-color: white;
+  margin-top: 10px;
+}
+.create-course-label{
+  font-weight: 700;
+
+}
+.create-course-label-name{
+  padding-top: 10px;
+  font-weight: 700;
+
+}
+.form-label{
+  margin-top: 10px;
+}
+.edit-course-button{
+  position: relative;
+  top: 18vh;
+  left: 12vw;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  height: 5vh;
+  width: 10vw;
+  font-weight: 600;
+}
+.edit-course-button:hover{
+cursor: pointer;
+}
+.add-lecture-box{
+  height: 55vh;
+  max-width: 50vw;
+  position: relative;
+  top: 5vh;
+  left: 5vw;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  margin: 20px;
+  padding: 10px;
+}
+.add-lecture-heading{
+ font-weight: 800;
+ font-size: 1.5rem;
+}
+.edit-course-content-heading{
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
