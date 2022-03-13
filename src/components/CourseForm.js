@@ -4,6 +4,7 @@ import AddIcon from "@mui/icons-material/Add";
 import TextField from "@mui/material/TextField";
 import {createCourse} from '../actions/courses';
 import {connect} from 'react-redux';
+import {Redirect} from 'react-router-dom'
 
 class CourseForm extends Component {
     constructor(props){
@@ -16,7 +17,7 @@ class CourseForm extends Component {
 
         }
     }
-    handleSubmit=(e)=>{
+    handleSubmit=async(e)=>{
         e.preventDefault();
         const payload = new FormData();
         for(var x = 0; x<this.state.avatar.length; x++) {
@@ -25,10 +26,10 @@ class CourseForm extends Component {
         payload.append("name", this.state.name);
         payload.append("description",this.state.description);
         payload.append("category",this.state.category);
-        console.log(payload);
-        // console.log(formData.get("name"));
-        console.log(this.state.name,this.state.category,this.state.description,this.state.avatar);
-        this.props.dispatch(createCourse(payload));
+        await this.props.dispatch(createCourse(payload));
+        return(
+          <Redirect to="/course/hello"/>
+      );
         
     }
     handleName=(e)=>{
@@ -65,7 +66,7 @@ class CourseForm extends Component {
             <p className="create-course-label-name">Name of the course</p>
             {/* <input id="name" className="create-course-field" type="text" placeholder="Name of the course" /> */}
 
-            <TextField id="outlined-basic" label="name" variant="outlined" onChange={this.handleName}/>
+            <TextField id="outlined-basic" label="Name" variant="outlined" onChange={this.handleName}/>
 
             <p className="create-course-label">Description of the course</p>
             <TextField
@@ -78,15 +79,15 @@ class CourseForm extends Component {
             <p className="create-course-label">Category of the course</p>
             <TextField
               id="outlined-basic"
-              label="category"
+              label="Category"
               variant="outlined"
               onChange={this.handleCategory}
             />
 
             
             {/* <div> */}
-              <label class="form-label" style={{ fontWeight: "700"}}>
-                choose a course Banner
+              <label class="form-label" style={{ fontWeight: "700",display:'block',marginBottom:'15px'}}>
+                Choose A Course Banner
               </label>
               <input
                 class="form-control"
@@ -95,6 +96,7 @@ class CourseForm extends Component {
                 accept="image/*,video/*"
                 multiple
                 onChange={this.handleAvatar}
+                className="upload-button"
               />
             {/* </div> */}
             <button type="submit" className="create-course-button">

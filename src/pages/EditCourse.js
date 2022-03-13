@@ -78,7 +78,7 @@ class CoursePage extends Component {
             </Container>
           </Container>
           
-          <form onSubmit={this.handleSubmit} className="add-lecture-box">
+          <form onSubmit={this.handleSubmit} className="add-lecture-box" style={{paddingLeft:'20px'}}>
           <p  className="add-lecture-heading">
               Add Lecture to Course
           </p>
@@ -92,16 +92,18 @@ class CoursePage extends Component {
 
             <br/>
             {/* <div> */}
-              <label class="form-label" style={{ fontWeight: "700"}}>
-                choose a video
+              <label class="form-label" style={{ fontWeight: "700" , display:'block',marginBottom:'10px'}}>
+                Choose A Video
               </label>
               <input
                 class="form-control"
+                className="upload-button"
                 name="video"
                 type="file"
                 accept="image/*,video/*"
                 multiple
                 onChange={this.handleAvatar}
+                style={{display:'block'}}
               />
             {/* </div> */}
             <br/>

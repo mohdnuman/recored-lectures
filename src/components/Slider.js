@@ -15,7 +15,7 @@ class Slider extends Component {
     for (var i = start; i < start + 4&& i<this.props.courses.length; i++) {
       rows.push(<Card key={i} course={this.props.courses[i]} />);
     }
-    return <span>{rows}</span>;
+    return <span className="courses"><span className="courses-inside">{rows}</span></span>;
   };
   handleNext = () => {
     this.setState({
