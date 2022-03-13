@@ -28,7 +28,7 @@ class LectureCard extends Component {
             <div className="lecture-not-active">
               <span style={{fontWeight:800}}>{this.props.lecture.name}</span> 
               <span className="drop-down" onClick={this.handleDrop}>
-              <img src="https://cdn-icons.flaticon.com/png/512/2985/premium/2985150.png?token=exp=1646077440~hmac=72719f6e732060f07ee818ce1c54c44a" style={{height:20, width:20}}/>
+              <img src="https://cdn-icons-png.flaticon.com/512/25/25243.png" style={{height:20, width:20}}/>
               </span>
             </div>
           )}
@@ -37,7 +37,7 @@ class LectureCard extends Component {
               <div className="lecture-not-active">
                 <span style={{fontWeight:800}}>{this.props.lecture.name}</span>
                 <span className="drop-down" onClick={this.handleDropClose}>
-                  <img src="https://cdn-icons.flaticon.com/png/512/2985/premium/2985150.png?token=exp=1646077440~hmac=72719f6e732060f07ee818ce1c54c44a" style={{height:20, width:20}}/>
+                  <img src="https://cdn-icons-png.flaticon.com/512/25/25243.png" style={{height:20, width:20}}/>
                 </span>
               </div>
               <video className="video" id="video_player" onLoad={this.onLoad} controls>
