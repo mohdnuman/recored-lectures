@@ -100,7 +100,7 @@ class CoursePage extends Component {
                 className="upload-button"
                 name="video"
                 type="file"
-                accept="image/*,video/*"
+                accept="video/*"
                 multiple
                 onChange={this.handleAvatar}
                 style={{display:'block'}}
